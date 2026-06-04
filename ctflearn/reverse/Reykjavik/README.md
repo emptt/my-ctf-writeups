@@ -7,7 +7,7 @@
 
 ## Analysis
 
-The binary stores an obfuscated flag using **XOR encryption** with a hardcoded single-byte key.
+The binary stores an obfuscated flag using **XOR encryption** with a hardcoded key.
 
 ### The Obfuscation
 
@@ -17,10 +17,8 @@ Each flag character is XORed with a constant before being stored:
 
 ### Finding the Key
 
-From Ghidra, the XOR instruction in the comparison loop uses `0x42`. This is the key.
-
-**XOR Key:** `0x42`
+From Ghidra, the XOR instruction in the comparison loop reveals the key. The key is a single byte.
 
 ### Reversing
 
-Applying XOR with `0x42` to every stored byte recovers the flag.
+Applying XOR with the key to every stored byte recovers the flag.
