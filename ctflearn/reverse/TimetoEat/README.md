@@ -1,4 +1,4 @@
-# eat.py — Reverse Engineering Writeup
+# Time to Eat — Reverse Engineering Writeup
 
 ## Tools
 - Neovim
